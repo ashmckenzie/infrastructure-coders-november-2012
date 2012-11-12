@@ -127,6 +127,8 @@
 
 !SLIDE bullets smbullets
 
+.notes The USR2 signal causes Unicorn to create a new master process, whilst keeping the previous master running serving the old app.  If the new Unicorn master process starts up successfully then the old master process is killed.  In the event the new Unicorn master process cannot start up properly, the old Unicorn master process continues serving clients.
+
 # Zero Downtime #
 
 * Customers experience no service loss during deployment
@@ -180,6 +182,25 @@
 * Lowers barrier to add and update checks
 * Potentially integrate with Jenkins
 * Open Source once complete
+
+
+!SLIDE bullets smbullets
+
+# RSpec Infrastructure Testing #
+
+    @@@ ruby
+    # nginx
+    #
+    shared_examples "an nginx setup" do
+      it { @host.should have_remote_file '/etc/nginx/servers/hotels.conf' }
+      it { @host.should listen_on_local_port 81 }
+    end
+
+    # postgres
+    #
+    shared_examples "a postgresql setup" do
+      it { @host.should have_remote_file '/db/postgresql/9.1/data/postmaster.pid', :sudo => true }
+    end
 
 
 !SLIDE bullets smbullets
