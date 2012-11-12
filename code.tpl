@@ -1,5 +1,5 @@
 <header>
-  <p id="title">Deployments &amp; Operations at Hooroo</p>
+  <p id="title">~~~CONFIG:name~~~</p>
   <img src="image/slides/logo.png" />
 </header>
 

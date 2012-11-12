@@ -124,42 +124,53 @@ header img {
 
 /* -------------------------------------------------------------------------- */
 
-#slide-3 table {
+#slide-4 table {
   position: relative;
   top: 30px;
   left: 50px;
 }
 
-#slide-4 h1 {
+#slide-5 h1 {
   padding-top: 40px;
   margin-bottom: 20px;
 }
 
-#slide-4 li {
+#slide-5 li {
   font-size: 0.8em;
-}
-
-#slide-5 img {
-  padding: 0 10px;
 }
 
 #slide-6 img {
   padding: 0 10px;
 }
 
-#slide-5 img[alt="nginx"] {
-  position: relative;
-  top: -40px;
+#slide-7 img {
+  padding: 0 10px;
 }
 
-#slide-12 h1 {
+#slide-13 h1 {
   margin-top: 100px;
 }
 
-#slide-12 pre {
+#slide-13 pre {
   margin: 60px 0 0 250px;
 }
 
-#slide-14 h1 {
-  margin-top: 140px;
+#slide-16 h1 {
+  margin-top: 100px;
+}
+
+#slide-16 pre {
+  margin: 20px 0 0 220px;
+}
+
+#slide-17 h1 {
+  margin-top: 90px;
+}
+
+#slide-17 pre {
+  margin: 20px 0 0 180px;
+}
+
+#slide-18 pre {
+  margin: 60px 0 0 250px;
 }

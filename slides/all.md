@@ -1,6 +1,6 @@
 !SLIDE
 
-# Deployments & Operations<br/> at Hooroo #
+# Operations at Hooroo #
 
 .notes Feel free to ask any questions at any time
 
@@ -17,6 +17,16 @@
 
 * [@ashmckenzie](http://twitter.com/ashmckenzie)
 * [http://ashmckenzie.org](http://ashmckenzie.org)
+
+
+!SLIDE bullets
+
+* Hooroo - What, whom, tech
+* Development & Deployment
+* Chef build pipeline
+* Zero downtime
+* Asynchronous Airbrake
+* Infrastructure Testing
 
 
 !SLIDE
@@ -81,10 +91,10 @@
 # Development goodies #
 
 * JavaScript heavy app
-* Backbone to bring order to the chaos
+* Backbone brings order to the chaos
 * CoffeeScript for developer productivity (and enjoyment!)
 * pry allows you to 'freeze' execution and interact
-* Zeus which significantly speeds up development & testing
+* Zeus - significantly speeds up development & testing
 
 ![backbone](backbone.png)
 ![pry](pry.png)
@@ -93,22 +103,26 @@
 
 !SLIDE bullets smbullets
 
-# Deployments #
+.notes Jenkins starts prepare job which runs 'fast' unit tests, finishes with close job which will create a deployment candidate
+
+# Deployment #
 
 * Jenkins and Build Pipeline plugin
-* Checkins to master kick off build and are tested thoroughly
-* Deployment candidates available once test suite successful
-* Daily Production deploys (~10AM)
+* Commits to master kick off build and are tested thoroughly
+* Successful Staging deploy results in Production deploy candidate
+* Daily Production deploys, usually arround 10AM
 * Takes approximately eight minutes
 
 
 !SLIDE bullets smbullets
 
-# Deployments cont'd #
+.notes We have a physical deploy button using an Arduino in the works
+
+# Deployment cont'd #
 
 * Utilise feature toggling of functionality to reduce delays
 * Everyone (inc. non techs) deploy to Production
-* Deployment is a single click affair
+* Deployment is a single click affair in Jenkins
 
 ![deploy](deploy.png)
 
@@ -140,10 +154,15 @@
 
 !SLIDE bullets smbullets
 
+.notes We wanted to fallback to the traditional synchronous method in the event of an error, so took advantage of the .async method accepting a block and providing custom functionality
+
 # Asynchronous Airbrake #
+
+![airbrake](airbrake.png)
 
 * Airbrake is great, but can be slow (submitting & their UI)
 * New Relic RPM revealed consistent delays in submitting
+* When using Ruby 1.9, async mode with [girl_friday](https://github.com/mperham/girl_friday)
 * Updated to use async Airbrake submission via Resque
 * Fallback to synchronous method if Resque job fails
 
@@ -173,39 +192,84 @@
 
 .notes Every Thursday we spend the afternoon trying out new tech, experimenting with new ideas / concepts.
 
-# 10% time sneak peek #
+# Infrastructure Testing #
 
-## RSpec Infrastructure Testing ##
+## Using RSpec ##
+
+
+!SLIDE bullets smbullets
+
+.notes Using RSpec to test our infrastructure seemed logical, leverage team knowledge
+
+# Infrastructure Testing #
 
 * Use RSpec to test infrastructure
 * Common language to all developers
 * Lowers barrier to add and update checks
-* Potentially integrate with Jenkins
+* Integrate with Jenkins
+* Drop JSON file containing state
 * Open Source once complete
 
 
 !SLIDE bullets smbullets
 
-# RSpec Infrastructure Testing #
+# Infrastructure Testing #
+
+## Service definition ##
 
     @@@ ruby
     # nginx
     #
     shared_examples "an nginx setup" do
-      it { @host.should have_remote_file '/etc/nginx/servers/hotels.conf' }
-      it { @host.should listen_on_local_port 81 }
+      it { host.should have_remote_file '/etc/nginx/nginx.conf' }
+      it { host.should listen_on_local_port 81 }
     end
 
     # postgres
     #
     shared_examples "a postgresql setup" do
-      it { @host.should have_remote_file '/db/postgresql/9.1/data/postmaster.pid', :sudo => true }
+      it { host.should have_remote_file '/var/run/postgres.pid' }
+      it { host.should listen_on_local_port 5432 }
     end
 
 
 !SLIDE bullets smbullets
 
-# RSpec Infrastructure<br/> Testing demo #
+# Infrastructure Testing #
+
+## Environment definition ##
+
+    @@@ ruby
+    shared_context "Environment" do
+      describe do
+        [ :app_master, :app_slaves ].each do |role|
+          describe role do
+            Nagios::HostManager.hostnames(environment, role).each do |hostname|
+              describe hostname do
+                it_behaves_like "an nginx setup"
+                it_behaves_like "a haproxy setup"
+              end
+            end
+          end
+        end
+      end
+    end
+
+
+!SLIDE bullets smbullets
+
+# Infrastructure Testing #
+
+## Specific environment definition ##
+
+    @@@ ruby
+    describe 'Shrubbery', :environment => :shrubbery do
+      include_context "Environment"
+    end
+
+!SLIDE bullets smbullets
+
+# Demo #
 
 
 !SLIDE bullets smbullets
