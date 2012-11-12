@@ -3,8 +3,9 @@
   <img src="image/slides/logo.png" />
 </header>
 
-<div id="background">
-</div>
+<!-- <div id="foreground">
+  <img src="file/foreground.jpg" />
+</div> -->
 
 <div id="slide-~~~CURRENT_SLIDE~~~" class="main">
   ~~~CONTENT~~~

@@ -3,6 +3,12 @@ body {
   /*font-family: Arvo !important;*/
 }
 
+a {
+  color: #5372E7;
+  text-decoration: none;
+  border-bottom: 1px dotted #98AAEE;
+}
+
 h1 {
   font-size: 4em;
   font-weight: bold;
@@ -31,15 +37,34 @@ code {
   font-size: 0.4em;
 }
 
+#foreground,
+#foreground-lighter {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0.4;
+  z-index: -1
+}
+
+#foreground-lighter {
+  opacity: 0.2 !important;
+}
+
+#foreground img {
+  height: 100%;
+  width: 100%;
+}
+
 #footer {
   background: transparent;
   color: #888;
 }
 
 .slide {
-  background-color: #eee;
-  color: #333;
-  /*background: url("foreground.png") transparent repeat fixed;*/
+  /*background-color: #eee;*/
+  /*color: #333;*/
 }
 
 table {

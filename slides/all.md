@@ -2,16 +2,22 @@
 
 # Deployments & Operations<br/> at Hooroo #
 
+.notes Feel free to ask any questions at any time
+
 <br/>
 ### Ash McKenzie, Developer###
-#### November 27 2012 ####
+#### November 13 2012 ####
 
 
-!SLIDE bullets
+!SLIDE bullets smbullets
+
+.notes Dev at Hooroo, Sys Admin background, love Ruby
 
 # Me #
 
-.notes Dev at Hooroo, Sys Admin in past life
+* [@ashmckenzie](http://twitter.com/ashmckenzie)
+* [http://ashmckenzie.org](http://ashmckenzie.org)
+
 
 !SLIDE
 
@@ -43,8 +49,8 @@
 # The company #
 
 * Wholly owned subsidiary of the Qantas Group
-* Australian focused travel site
-* Provide accomodation booking and inspirational content
+* Australian focused travel site, for travellers
+* Provides accomodation booking and inspirational content
 * Emphasis on strong visuals and ease of use
 
 ![Hooroo](hooroo.png)
@@ -55,11 +61,12 @@
 # The tech #
 
 * EngineYard (AWS)
-* Rails 3.2.x
-* nginx, unicorn, HAProxy
+* Ruby 1.9.3, Rails 3.2.x
+* nginx, Unicorn, HAProxy
 * PostgreSQL 9.x, Redis
 
 ![engine_yard](engine_yard.png)
+![ruby](ruby.png)
 ![rails](rails.png)
 ![nginx](nginx.png)
 ![unicorn](unicorn.png)
@@ -71,10 +78,17 @@
 
 # Deployments #
 
-* Daily Production deploys (~10AM)
 * Leverage Jenkins and Build Pipeline plugin
-* Takes approximately eight minutes
 * Deployment candidates available once test suite successful
+* Daily Production deploys (~10AM)
+* Takes approximately eight minutes
+* Utilise feature toggling of functionality to reduce delays
+
+
+!SLIDE bullets smbullets
+
+# Chef build pipeline #
+
 
 
 !SLIDE bullets smbullets
@@ -82,8 +96,9 @@
 # Zero Downtime #
 
 * Customers experience no service loss during deployment
-* Achieved using
+* Unicorn reload (USR2) and careful DB migrations
 
+![maintenance](maintenance.png)
 
 !SLIDE bullets smbullets
 
@@ -92,4 +107,25 @@
 
 !SLIDE bullets smbullets
 
-# RSpec Infrastructure Testing #
+.notes Every Thursday we spend the afternoon trying out new tech, experimenting with new ideas / concepts.
+
+# 10% time sneak peek #
+
+## RSpec Infrastructure Testing ##
+
+* Use RSpec to test infrastructure
+* Common language to all developers
+* Lowers barrier to add and update checks
+* Plan on Open Sourcing once complete
+
+
+!SLIDE bullets smbullets
+
+# RSpec Infrastructure<br/> Testing demo #
+
+
+!SLIDE bullets smbullets
+
+# Thanks :) #
+
+
