@@ -21,7 +21,7 @@
 
 !SLIDE bullets
 
-* Hooroo - What, whom, tech
+* Hooroo
 * Development & Deployment
 * Chef build pipeline
 * Zero downtime
