@@ -34,8 +34,8 @@
       <td>Crikes it's getting late, mate, I should probably get back.</td>
     </tr>
     <tr>
-      <td>Shelia:</td>
-      <td>No worries, mate, see you for the shearing competition tomorrow. Hooroo.</td>
+      <td>Shaz:</td>
+      <td>No worries mate, see you for the shearing competition tomorrow. Hooroo.</td>
     </tr>
     <tr>
       <td>Bruce:</td>
@@ -76,6 +76,23 @@
 
 !SLIDE bullets smbullets
 
+.notes Using Zeus lately, speeds up the use of Rails console, faster testing response, etc
+
+# Development goodies #
+
+* JavaScript heavy app
+* Backbone to bring order to the chaos
+* CoffeeScript for developer productivity (and enjoyment!)
+* pry allows you to 'freeze' execution and interact
+* Zeus which significantly speeds up development & testing
+
+![backbone](backbone.png)
+![pry](pry.png)
+![coffeescript](coffeescript.png)
+
+
+!SLIDE bullets smbullets
+
 # Deployments #
 
 * Jenkins and Build Pipeline plugin
@@ -92,6 +109,8 @@
 * Utilise feature toggling of functionality to reduce delays
 * Everyone (inc. non techs) deploy to Production
 * Deployment is a single click affair
+
+![deploy](deploy.png)
 
 
 !SLIDE bullets smbullets
@@ -127,6 +146,27 @@
 * Fallback to synchronous method if Resque job fails
 
 
+!SLIDE[tpl=code] bullets smbullets
+
+# Asynchronous Airbrake #
+
+### config/initialisers/airbrake.rb ###
+
+    @@@ ruby
+    Airbrake.configure do |config|
+      config.api_key = 12345678
+
+      config.async do |notice|
+        begin
+          Resque.enqueue(AirbrakeDeliveryWorker, notice.to_xml)
+        rescue
+          # job submission failed, so go the slower route.
+          Airbrake.sender.send_to_airbrake(notice)
+        end
+      end
+    end
+
+
 !SLIDE bullets smbullets
 
 .notes Every Thursday we spend the afternoon trying out new tech, experimenting with new ideas / concepts.
@@ -138,7 +178,8 @@
 * Use RSpec to test infrastructure
 * Common language to all developers
 * Lowers barrier to add and update checks
-* Plan on Open Sourcing once complete
+* Potentially integrate with Jenkins
+* Open Source once complete
 
 
 !SLIDE bullets smbullets
@@ -149,5 +190,4 @@
 !SLIDE bullets smbullets
 
 # Thanks :) #
-
 
