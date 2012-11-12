@@ -78,17 +78,32 @@
 
 # Deployments #
 
-* Leverage Jenkins and Build Pipeline plugin
+* Jenkins and Build Pipeline plugin
+* Checkins to master kick off build and are tested thoroughly
 * Deployment candidates available once test suite successful
 * Daily Production deploys (~10AM)
 * Takes approximately eight minutes
-* Utilise feature toggling of functionality to reduce delays
 
 
 !SLIDE bullets smbullets
 
+# Deployments cont'd #
+
+* Utilise feature toggling of functionality to reduce delays
+* Everyone (inc. non techs) deploy to Production
+* Deployment is a single click affair
+
+
+!SLIDE bullets smbullets
+
+.notes Jenkins detects chef related changes, kicks off a dedicated Chef pipeline build
+
 # Chef build pipeline #
 
+* Chef recipes live within main codebase
+* Chef changes detected and procesed by Jenkins
+* Aim to mirror code deployment process
+* Reduces environment inconsistencies
 
 
 !SLIDE bullets smbullets
@@ -97,12 +112,19 @@
 
 * Customers experience no service loss during deployment
 * Unicorn reload (USR2) and careful DB migrations
+* Great [RailsCast](http://railscasts.com/episodes/373-zero-downtime-deployment) recently covered all the gotchas
 
 ![maintenance](maintenance.png)
+
 
 !SLIDE bullets smbullets
 
 # Asynchronous Airbrake #
+
+* Airbrake is great, but can be slow (submitting & their UI)
+* New Relic RPM revealed consistent delays in submitting
+* Updated to use async Airbrake submission via Resque
+* Fallback to synchronous method if Resque job fails
 
 
 !SLIDE bullets smbullets

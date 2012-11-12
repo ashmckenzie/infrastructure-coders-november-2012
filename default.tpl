@@ -1,5 +1,5 @@
 <header>
-  <span id="slide-section"></span>
+  <p id="title">Deployments &amp; Operations at Hooroo</p>
   <img src="image/slides/logo.png" />
 </header>
 

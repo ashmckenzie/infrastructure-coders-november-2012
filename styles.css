@@ -9,6 +9,15 @@ a {
   border-bottom: 1px dotted #98AAEE;
 }
 
+p#title {
+  color: white;
+  font-size: 1.25em;
+  margin: 20px;
+  display: block;
+  text-shadow: 2px 2px 3px #333;
+  letter-spacing: 1px;
+}
+
 h1 {
   font-size: 4em;
   font-weight: bold;
