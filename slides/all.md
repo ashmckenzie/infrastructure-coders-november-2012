@@ -278,5 +278,10 @@
 
 !SLIDE bullets smbullets
 
-# Thanks :) #
+# Thank-you! #
+
+## Questions? ##
+
+<br/>
+We're hiring too :)
 
