@@ -161,7 +161,7 @@
 ![airbrake](airbrake.png)
 
 * Airbrake is great, but can be slow (submitting & their UI)
-* New Relic RPM revealed consistent delays in submitting
+* New Relic RPM revealed delays in submitting (up to 3 secs)
 * When using Ruby 1.9, async mode with [girl_friday](https://github.com/mperham/girl_friday)
 * Updated to use async Airbrake submission via Resque
 * Fallback to synchronous method if Resque job fails
@@ -264,6 +264,10 @@
 
     @@@ ruby
     describe 'Shrubbery', :environment => :shrubbery do
+      include_context "Environment"
+    end
+
+    describe 'Staging', :environment => :staging do
       include_context "Environment"
     end
 
