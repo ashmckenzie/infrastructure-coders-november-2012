@@ -101,7 +101,7 @@
 ![coffeescript](coffeescript.png)
 
 
-!SLIDE bullets smbullets
+!SLIDE bullets
 
 .notes Jenkins starts prepare job which runs 'fast' unit tests, finishes with close job which will create a deployment candidate
 
@@ -109,8 +109,8 @@
 
 * Jenkins and Build Pipeline plugin
 * Commits to master kick off build and are tested thoroughly
-* Successful Staging deploy results in Production deploy candidate
-* Daily Production deploys, usually arround 10AM
+* Successful Staging deploy == Production deploy candidate
+* Daily Production deploy, usually arround 10AM
 * Takes approximately eight minutes
 
 
@@ -127,7 +127,7 @@
 ![deploy](deploy.png)
 
 
-!SLIDE bullets smbullets
+!SLIDE bullets
 
 .notes Jenkins detects chef related changes, kicks off a dedicated Chef pipeline build
 
@@ -139,7 +139,7 @@
 * Reduces environment inconsistencies
 
 
-!SLIDE bullets smbullets
+!SLIDE bullets
 
 .notes The USR2 signal causes Unicorn to create a new master process, whilst keeping the previous master running serving the old app.  If the new Unicorn master process starts up successfully then the old master process is killed.  In the event the new Unicorn master process cannot start up properly, the old Unicorn master process continues serving clients.
 
