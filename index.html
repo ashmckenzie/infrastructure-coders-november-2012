@@ -1,0 +1,622 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Operations at Hooroo</title>
+
+  <meta name="viewport" content="width=device-width"/>
+
+  <link rel="stylesheet" href="./css/reset.css" type="text/css"/>
+  <link rel="stylesheet" href="./css/showoff.css" type="text/css"/>
+
+  <link type="text/css" href="./css/fg.menu.css" media="screen" rel="stylesheet" />
+  <link type="text/css" href="./css/theme/ui.all.css" media="screen" rel="stylesheet" />
+  <link type="text/css" href="./css/sh_style.css" rel="stylesheet" />
+
+  <script type="text/javascript" src="./js/jquery-1.4.2.min.js"></script>
+  <script type="text/javascript" src="./js/jquery.cycle.all.js"></script>
+	<script type="text/javascript" src="./js/jquery-print.js"></script>
+  <script type="text/javascript" src="./js/jquery.batchImageLoad.js"></script>
+
+  <script type="text/javascript" src="./js/jquery.doubletap-0.1.js"></script>
+
+  <script type="text/javascript" src="./js/fg.menu.js"></script>
+  <script type="text/javascript" src="./js/showoff.js"></script>
+  <script type="text/javascript" src="./js/jTypeWriter.js"> </script>
+  <script type="text/javascript" src="./js/sh_main.min.js"></script>
+  <script type="text/javascript" src="./js/core.js"></script>
+  <script type="text/javascript" src="./js/showoffcore.js"></script>
+  <script type="text/javascript" src="./js/coffee-script.js"></script>
+
+  
+    
+      <script type="text/javascript" src="./js/sh_lang/sh_ruby.min.js"></script>
+    
+  
+
+  
+    <link rel="stylesheet" href="./file/styles.css" type="text/css"/>
+  
+
+  
+
+  <script type="text/javascript">
+  $(function(){
+      setupPreso(false, './');
+  });
+  </script>
+
+</head>
+
+<body>
+
+<a tabindex="0" href="#search-engines" class="fg-button fg-button-icon-right ui-widget ui-state-default ui-corner-all" id="navmenu"><span class="ui-icon ui-icon-triangle-1-s"></span>slides</a>
+<div id="navigation" class="hidden"></div>
+
+<div id="help">
+  <table>
+    <tr><td class="key">z, ?</td><td>toggle help (this)</td></tr>
+    <tr><td class="key">space, &rarr;</td><td>next slide</td></tr>
+    <tr><td class="key">shift-space, &larr;</td><td>previous slide</td></tr>
+    <tr><td class="key">d</td><td>toggle debug mode</td></tr>
+    <tr><td class="key">## &lt;ret&gt;</td><td>go to slide #</td></tr>
+    <tr><td class="key">c, t</td><td>table of contents (vi)</td></tr>
+    <tr><td class="key">f</td><td>toggle footer</td></tr>
+    <tr><td class="key">r</td><td>reload slides</td></tr>
+    <tr><td class="key">n</td><td>toggle notes</td></tr>
+    <tr><td class="key">p</td><td>run preshow</td></tr>
+    <tr><td class="key">P</td><td>toggle pause</td></tr>
+  </table>
+</div>
+
+<div class="buttonNav">
+  <input type="submit" onClick="prevStep();" value="prev"/>
+  <input type="submit" onClick="nextStep();" value="next"/>
+</div>
+
+<div id="preso">loading presentation...</div>
+<div id="footer">
+  <span id="slideInfo"></span>
+  <span id="debugInfo"></span>
+  <span id="notesInfo"></span>
+</div>
+
+<div id="slides" class="offscreen" style="display:none;">
+<div class="slide" data-transition="none"><header>
+  <p id="title">Operations at Hooroo</p>
+  <img src="image/slides/logo.png"/>
+</header>
+
+<!-- <div id="foreground">
+  <img src="file/foreground.jpg" />
+</div> -->
+
+<div id="slide-1" class="main">
+  <div class="content" ref="slides/all/1">
+<h1>Operations at Hooroo</h1>
+
+<p class="notes">Feel free to ask any questions at any time</p>
+
+<p><br/></p>
+
+<h3>Ash McKenzie, Developer</h3>
+
+<h4>November 13 2012</h4>
+</div>
+
+<div>
+</div>
+</div></div><div class="slide" data-transition="none"><header>
+  <p id="title">Operations at Hooroo</p>
+  <img src="image/slides/logo.png"/>
+</header>
+
+<!-- <div id="foreground">
+  <img src="file/foreground.jpg" />
+</div> -->
+
+<div id="slide-2" class="main">
+  <div class="content bullets smbullets" ref="slides/all/2">
+<p class="notes">Dev at Hooroo, Sys Admin background, love Ruby</p>
+
+<h1>Me</h1>
+
+<ul>
+<li><a href="http://twitter.com/ashmckenzie">@ashmckenzie</a></li>
+<li><a href="http://ashmckenzie.org">http://ashmckenzie.org</a></li>
+</ul>
+</div>
+
+<div>
+</div>
+</div></div><div class="slide" data-transition="none"><header>
+  <p id="title">Operations at Hooroo</p>
+  <img src="image/slides/logo.png"/>
+</header>
+
+<!-- <div id="foreground">
+  <img src="file/foreground.jpg" />
+</div> -->
+
+<div id="slide-3" class="main">
+  <div class="content bullets" ref="slides/all/3">
+<ul>
+<li>Hooroo</li>
+<li>Development &amp; Deployment</li>
+<li>Chef build pipeline</li>
+<li>Zero downtime</li>
+<li>Asynchronous Airbrake</li>
+<li>Infrastructure Testing</li>
+</ul>
+</div>
+
+<div>
+</div>
+</div></div><div class="slide" data-transition="none"><header>
+  <p id="title">Operations at Hooroo</p>
+  <img src="image/slides/logo.png"/>
+</header>
+
+<!-- <div id="foreground">
+  <img src="file/foreground.jpg" />
+</div> -->
+
+<div id="slide-4" class="main">
+  <div class="content" ref="slides/all/4">
+<h1>Hooroo</h1>
+
+<p><a href="http://urbandictionary.com/define.php?term=hooroo">urbandictionary.com/define.php?term=hooroo</a></p>
+
+<p><cite>An Aussie way of saying "goodbye"</cite></p>
+
+<p><cite>
+  <table>
+    <tr>
+      <td>Bruce:</td>
+      <td>Crikes it's getting late, mate, I should probably get back.</td>
+    </tr>
+    <tr>
+      <td>Shaz:</td>
+      <td>No worries mate, see you for the shearing competition tomorrow. Hooroo.</td>
+    </tr>
+    <tr>
+      <td>Bruce:</td>
+      <td>Hooroo!</td>
+    </tr>
+</table></cite>
+</p>
+
+<div>
+</div>
+</div></div></div><div class="slide" data-transition="none"><header>
+  <p id="title">Operations at Hooroo</p>
+  <img src="image/slides/logo.png"/>
+</header>
+
+<!-- <div id="foreground">
+  <img src="file/foreground.jpg" />
+</div> -->
+
+<div id="slide-5" class="main">
+  <div class="content bullets smbullets" ref="slides/all/5">
+<h1>The company</h1>
+
+<ul>
+<li>Wholly owned subsidiary of the Qantas Group</li>
+<li>Australian focused travel site, for travellers</li>
+<li>Provides accomodation booking and inspirational content</li>
+<li>Emphasis on strong visuals and ease of use</li>
+</ul>
+
+<p><img src="./file/slides/hooroo.png" width="800" height="331" alt="Hooroo"/>
+</p>
+
+<div>
+</div>
+</div></div></div><div class="slide" data-transition="none"><header>
+  <p id="title">Operations at Hooroo</p>
+  <img src="image/slides/logo.png"/>
+</header>
+
+<!-- <div id="foreground">
+  <img src="file/foreground.jpg" />
+</div> -->
+
+<div id="slide-6" class="main">
+  <div class="content bullets smbullets" ref="slides/all/6">
+<h1>The tech</h1>
+
+<ul>
+<li>EngineYard (AWS)</li>
+<li>Ruby 1.9.3, Rails 3.2.x</li>
+<li>nginx, Unicorn, HAProxy</li>
+<li>PostgreSQL 9.x, Redis</li>
+</ul>
+
+<p><img src="./file/slides/engine_yard.png" width="100" height="164" alt="engine_yard">
+<img src="./file/slides/ruby.png" width="100" height="100" alt="ruby">
+<img src="./file/slides/rails.png" width="87" height="111" alt="rails">
+<img src="./file/slides/nginx.png" width="100" height="23" alt="nginx">
+<img src="./file/slides/unicorn.png" width="100" height="103" alt="unicorn">
+<img src="./file/slides/postgres.png" width="100" height="103" alt="postgres">
+<img src="./file/slides/redis.png" width="100" height="86" alt="redis"/>
+</img>
+
+<div>
+</div>
+</img></img></img></img></img></p></div></div></div><div class="slide" data-transition="none"><header>
+  <p id="title">Operations at Hooroo</p>
+  <img src="image/slides/logo.png"/>
+</header>
+
+<!-- <div id="foreground">
+  <img src="file/foreground.jpg" />
+</div> -->
+
+<div id="slide-7" class="main">
+  <div class="content bullets smbullets" ref="slides/all/7">
+<p class="notes">Using Zeus lately, speeds up the use of Rails console, faster testing response, etc</p>
+
+<h1>Development goodies</h1>
+
+<ul>
+<li>JavaScript heavy app</li>
+<li>Backbone brings order to the chaos</li>
+<li>CoffeeScript for developer productivity (and enjoyment!)</li>
+<li>pry allows you to 'freeze' execution and interact</li>
+<li>Zeus - significantly speeds up development &amp; testing</li>
+</ul>
+
+<p><img src="./file/slides/backbone.png" width="200" height="36" alt="backbone">
+<img src="./file/slides/pry.png" width="200" height="130" alt="pry">
+<img src="./file/slides/coffeescript.png" width="200" height="44" alt="coffeescript"/>
+</img>
+
+<div>
+</div>
+</img></p></div></div></div><div class="slide" data-transition="none"><header>
+  <p id="title">Operations at Hooroo</p>
+  <img src="image/slides/logo.png"/>
+</header>
+
+<!-- <div id="foreground">
+  <img src="file/foreground.jpg" />
+</div> -->
+
+<div id="slide-8" class="main">
+  <div class="content bullets" ref="slides/all/8">
+<p class="notes">Jenkins starts prepare job which runs 'fast' unit tests, finishes with close job which will create a deployment candidate</p>
+
+<h1>Deployment</h1>
+
+<ul>
+<li>Jenkins and Build Pipeline plugin</li>
+<li>Commits to master kick off build and are tested thoroughly</li>
+<li>Successful Staging deploy == Production deploy candidate</li>
+<li>Daily Production deploy, usually arround 10AM</li>
+<li>Takes approximately eight minutes</li>
+</ul>
+</div>
+
+<div>
+</div>
+</div></div><div class="slide" data-transition="none"><header>
+  <p id="title">Operations at Hooroo</p>
+  <img src="image/slides/logo.png"/>
+</header>
+
+<!-- <div id="foreground">
+  <img src="file/foreground.jpg" />
+</div> -->
+
+<div id="slide-9" class="main">
+  <div class="content bullets smbullets" ref="slides/all/9">
+<p class="notes">We have a physical deploy button using an Arduino in the works</p>
+
+<h1>Deployment cont'd</h1>
+
+<ul>
+<li>Utilise feature toggling of functionality to reduce delays</li>
+<li>Everyone (inc. non techs) deploy to Production</li>
+<li>Deployment is a single click affair in Jenkins</li>
+</ul>
+
+<p><img src="./file/slides/deploy.png" width="342" height="153" alt="deploy"/>
+</p>
+
+<div>
+</div>
+</div></div></div><div class="slide" data-transition="none"><header>
+  <p id="title">Operations at Hooroo</p>
+  <img src="image/slides/logo.png"/>
+</header>
+
+<!-- <div id="foreground">
+  <img src="file/foreground.jpg" />
+</div> -->
+
+<div id="slide-10" class="main">
+  <div class="content bullets" ref="slides/all/10">
+<p class="notes">Jenkins detects chef related changes, kicks off a dedicated Chef pipeline build</p>
+
+<h1>Chef build pipeline</h1>
+
+<ul>
+<li>Chef recipes live within main codebase</li>
+<li>Chef changes detected and procesed by Jenkins</li>
+<li>Aim to mirror code deployment process</li>
+<li>Reduces environment inconsistencies</li>
+</ul>
+</div>
+
+<div>
+</div>
+</div></div><div class="slide" data-transition="none"><header>
+  <p id="title">Operations at Hooroo</p>
+  <img src="image/slides/logo.png"/>
+</header>
+
+<!-- <div id="foreground">
+  <img src="file/foreground.jpg" />
+</div> -->
+
+<div id="slide-11" class="main">
+  <div class="content bullets" ref="slides/all/11">
+<p class="notes">The USR2 signal causes Unicorn to create a new master process, whilst keeping the previous master running serving the old app.  If the new Unicorn master process starts up successfully then the old master process is killed.  In the event the new Unicorn master process cannot start up properly, the old Unicorn master process continues serving clients.</p>
+
+<h1>Zero Downtime</h1>
+
+<ul>
+<li>Customers experience no service loss during deployment</li>
+<li>Unicorn reload (USR2) and careful DB migrations</li>
+<li>Great <a href="http://railscasts.com/episodes/373-zero-downtime-deployment">RailsCast</a> recently covered all the gotchas</li>
+</ul>
+
+<p><img src="./file/slides/maintenance.png" width="100" height="107" alt="maintenance"/>
+</p>
+
+<div>
+</div>
+</div></div></div><div class="slide" data-transition="none"><header>
+  <p id="title">Operations at Hooroo</p>
+  <img src="image/slides/logo.png"/>
+</header>
+
+<!-- <div id="foreground">
+  <img src="file/foreground.jpg" />
+</div> -->
+
+<div id="slide-12" class="main">
+  <div class="content bullets smbullets" ref="slides/all/12">
+<p class="notes">We wanted to fallback to the traditional synchronous method in the event of an error, so took advantage of the .async method accepting a block and providing custom functionality</p>
+
+<h1>Asynchronous Airbrake</h1>
+
+<p><img src="./file/slides/airbrake.png" width="150" height="162" alt="airbrake"/>
+
+<ul>
+<li>Airbrake is great, but can be slow (submitting  their UI)</li>
+<li>New Relic RPM revealed delays in submitting (up to 3 secs)</li>
+<li>When using Ruby 1.9, async mode with <a href="https://github.com/mperham/girl_friday">girl_friday</a></li>
+<li>Updated to use async Airbrake submission via Resque</li>
+<li>Fallback to synchronous method if Resque job fails</li>
+</ul>
+</p>
+
+<div>
+</div>
+</div></div></div><div class="slide" data-transition="none"><header>
+  <p id="title">Operations at Hooroo</p>
+  <img src="image/slides/logo.png"/>
+</header>
+
+<!-- <div id="foreground-lighter">
+  <img src="file/foreground.jpg" />
+</div> -->
+
+<div id="slide-13" class="main">
+  <div class="content bullets smbullets" ref="slides/all/13">
+<h1>Asynchronous Airbrake</h1>
+
+<h3>config/initialisers/airbrake.rb</h3>
+
+<pre class="sh_ruby"><code>Airbrake.configure do |config|
+  config.api_key = 12345678
+
+  config.async do |notice|
+    begin
+      Resque.enqueue(AirbrakeDeliveryWorker, notice.to_xml)
+    rescue
+      # job submission failed, so go the slower route.
+      Airbrake.sender.send_to_airbrake(notice)
+    end
+  end
+end</code></pre>
+</div>
+
+<div>
+</div>
+</div></div><div class="slide" data-transition="none"><header>
+  <p id="title">Operations at Hooroo</p>
+  <img src="image/slides/logo.png"/>
+</header>
+
+<!-- <div id="foreground">
+  <img src="file/foreground.jpg" />
+</div> -->
+
+<div id="slide-14" class="main">
+  <div class="content bullets smbullets" ref="slides/all/14">
+<p class="notes">Every Thursday we spend the afternoon trying out new tech, experimenting with new ideas / concepts.</p>
+
+<h1>Infrastructure Testing</h1>
+
+<h2>Using RSpec</h2>
+</div>
+
+<div>
+</div>
+</div></div><div class="slide" data-transition="none"><header>
+  <p id="title">Operations at Hooroo</p>
+  <img src="image/slides/logo.png"/>
+</header>
+
+<!-- <div id="foreground">
+  <img src="file/foreground.jpg" />
+</div> -->
+
+<div id="slide-15" class="main">
+  <div class="content bullets smbullets" ref="slides/all/15">
+<p class="notes">Using RSpec to test our infrastructure seemed logical, leverage team knowledge</p>
+
+<h1>Infrastructure Testing</h1>
+
+<ul>
+<li>Use RSpec to test infrastructure</li>
+<li>Common language to all developers</li>
+<li>Lowers barrier to add and update checks</li>
+<li>Integrate with Jenkins</li>
+<li>Drop JSON file containing state</li>
+<li>Open Source once complete</li>
+</ul>
+</div>
+
+<div>
+</div>
+</div></div><div class="slide" data-transition="none"><header>
+  <p id="title">Operations at Hooroo</p>
+  <img src="image/slides/logo.png"/>
+</header>
+
+<!-- <div id="foreground">
+  <img src="file/foreground.jpg" />
+</div> -->
+
+<div id="slide-16" class="main">
+  <div class="content bullets smbullets" ref="slides/all/16">
+<h1>Infrastructure Testing</h1>
+
+<h2>Service definition</h2>
+
+<pre class="sh_ruby"><code># nginx
+#
+shared_examples "an nginx setup" do
+  it { host.should have_remote_file '/etc/nginx/nginx.conf' }
+  it { host.should listen_on_local_port 81 }
+end
+
+# postgres
+#
+shared_examples "a postgresql setup" do
+  it { host.should have_remote_file '/var/run/postgres.pid' }
+  it { host.should listen_on_local_port 5432 }
+end</code></pre>
+</div>
+
+<div>
+</div>
+</div></div><div class="slide" data-transition="none"><header>
+  <p id="title">Operations at Hooroo</p>
+  <img src="image/slides/logo.png"/>
+</header>
+
+<!-- <div id="foreground">
+  <img src="file/foreground.jpg" />
+</div> -->
+
+<div id="slide-17" class="main">
+  <div class="content bullets smbullets" ref="slides/all/17">
+<h1>Infrastructure Testing</h1>
+
+<h2>Environment definition</h2>
+
+<pre class="sh_ruby"><code>shared_context "Environment" do
+  describe do
+    [ :app_master, :app_slaves ].each do |role|
+      describe role do
+        Nagios::HostManager.hostnames(environment, role).each do |hostname|
+          describe hostname do
+            it_behaves_like "an nginx setup"
+            it_behaves_like "a haproxy setup"
+          end
+        end
+      end
+    end
+  end
+end</code></pre>
+</div>
+
+<div>
+</div>
+</div></div><div class="slide" data-transition="none"><header>
+  <p id="title">Operations at Hooroo</p>
+  <img src="image/slides/logo.png"/>
+</header>
+
+<!-- <div id="foreground">
+  <img src="file/foreground.jpg" />
+</div> -->
+
+<div id="slide-18" class="main">
+  <div class="content bullets smbullets" ref="slides/all/18">
+<h1>Infrastructure Testing</h1>
+
+<h2>Specific environment definition</h2>
+
+<pre class="sh_ruby"><code>describe 'Shrubbery', :environment =&gt; :shrubbery do
+  include_context "Environment"
+end
+
+describe 'Staging', :environment =&gt; :staging do
+  include_context "Environment"
+end</code></pre>
+</div>
+
+<div>
+</div>
+</div></div><div class="slide" data-transition="none"><header>
+  <p id="title">Operations at Hooroo</p>
+  <img src="image/slides/logo.png"/>
+</header>
+
+<!-- <div id="foreground">
+  <img src="file/foreground.jpg" />
+</div> -->
+
+<div id="slide-19" class="main">
+  <div class="content bullets smbullets" ref="slides/all/19">
+<h1>Demo</h1>
+</div>
+
+<div>
+</div>
+</div></div><div class="slide" data-transition="none"><header>
+  <p id="title">Operations at Hooroo</p>
+  <img src="image/slides/logo.png"/>
+</header>
+
+<!-- <div id="foreground">
+  <img src="file/foreground.jpg" />
+</div> -->
+
+<div id="slide-20" class="main">
+  <div class="content bullets smbullets" ref="slides/all/20">
+<h1>Thank-you!</h1>
+
+<h2>Questions?</h2>
+
+<p><br/>
+We're hiring too :)</p>
+</div>
+
+<div>
+</div>
+</div></div></div>
+<div id="pauseScreen">
+  
+</div>
+
+</body>
+</html>
