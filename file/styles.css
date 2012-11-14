@@ -1,11 +1,9 @@
 body {
   background: url("background.png") transparent repeat fixed;
-  /*font-family: Arvo !important;*/
 }
 
 body {
-  /*font-family: Helvetica;*/
-  font-family: "FS Me";
+  font-family: Helvetica;
 }
 
 a {
@@ -19,7 +17,6 @@ p#title {
   font-size: 1.15em;
   margin: 20px;
   display: block;
-  /*text-shadow: 2px 2px 3px #333;*/
   letter-spacing: 1px;
 }
 
@@ -39,8 +36,6 @@ h4 {
 }
 
 h1, h2, h3, h4 {
-  /*font-family: Georgia;*/
-  font-family: "FS Me";
   line-height: 1.3em;
 }
 
